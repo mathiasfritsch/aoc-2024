@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "debugpy",
+            "request": "launch",
+            "name": "Launch solution-12-02_part2.py",
+            "program": "${workspaceFolder}/12-02/${input:programName}",
+            "console": "integratedTerminal"
+        }
+    ],
+    "inputs": [
+        {
+            "type": "pickString",
+            "id": "programName",
+            "description": "Select the Python file to launch",
+            "options": [
+                "solution-12-02_part1.py",
+                "solution-12-02_part2.py"
+            ]
+        }
+    ]
+}
