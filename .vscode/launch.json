@@ -3,8 +3,8 @@
         {
             "type": "debugpy",
             "request": "launch",
-            "name": "Launch solution-12-02_part2.py",
-            "program": "${workspaceFolder}/12-02/${input:programName}",
+            "name": "Launch part1",
+            "program": "${workspaceFolder}/12-03/part1.py",
             "console": "integratedTerminal"
         }
     ],
@@ -14,8 +14,7 @@
             "id": "programName",
             "description": "Select the Python file to launch",
             "options": [
-                "solution-12-02_part1.py",
-                "solution-12-02_part2.py"
+                "part1.py"
             ]
         }
     ]
