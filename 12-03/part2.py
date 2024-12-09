@@ -4,22 +4,32 @@ import os
 def read_input():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(script_dir, 'input.txt')
-    with open(file  = file_path) as f:
-        return f.read()
+    
+    with open(file_path, 'r') as f:
+        return ''.join(line.strip() for line in f)
 
-input = "_a_12_a_84_a_567_b_98_a_1234_b_88888_b_777_a_666_a_111_b_444_a_333_b_1999_b_23333_a_"
+def calculate_sum(input):
 
-#input = read_input()
+    pattern = r'mul\((\b[1-9]\d{0,2}\b),(\b[1-9]\d{0,2}\b)\)'
+    matches = re.findall(pattern, input)
 
-#pattern = r'_a_(.*?)pattern = r'_a_(.*?)_b_''
+    sum = 0
 
-# split the input string by the pattern
-pattern = r'_a_(.*?)_b_'
+    for i, (num1, num2) in enumerate(matches, 1):
+        sum += int(num1) * int(num2)
+    return sum
 
-# Find all matches
-matches = re.findall(pattern, input)
+input = read_input()
 
+pattern = r'do\(\)(.*?)don\'t\(\)'
 
+matches = re.findall(pattern, "do()" + input + "don't()")
+
+sum = 0
+
+for i, match in enumerate(matches, 1):
+
+    sum += calculate_sum(match)
 
 
 
