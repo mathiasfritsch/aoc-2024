@@ -4,7 +4,7 @@
             "type": "debugpy",
             "request": "launch",
             "name": "Launch part1",
-            "program": "${workspaceFolder}/12-03/part3.py",
+            "program": "${workspaceFolder}/12-04/part1.py",
             "console": "integratedTerminal"
         }
     ],
@@ -13,9 +13,7 @@
             "type": "pickString",
             "id": "programName",
             "description": "Select the Python file to launch",
-            "options": [
-                "part3.py"
-            ]
+            "options": []
         }
     ]
 }
